@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista Laura Filpo - Tu Mejor Versión</title>
+    <meta name="description"
+        content="Transforma tu salud con planes nutricionales personalizados. Asesoría experta para alcanzar tus metas de bienestar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_dynamic.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Background Animated Blobs -->
+    <div class="blobs-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Laura Filpo Logo">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto" class="btn-primary">Comprar Dieta</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="container hero-container-split">
+            <div class="hero-text-content">
+                <h1 class="hero-title">Nutrición clínica para <br><span class="text-gradient">mejorar tu salud</span>
+                    desde la raíz</h1>
+                <p class="hero-subtitle">
+                    Soy la <strong>Nut. Laura Filpo Mercado</strong>. Mi vocación es acompañarte hacia un bienestar
+                    real,
+                    tratándote como el ser humano único que eres, no como un número más.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/18094569368" class="btn-primary btn-lg"><i class="fab fa-whatsapp"></i>
+                        Agendar Cita</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Pacientes Felices</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-content">
+                <img src="assets/hero_real.jpg" alt="Nut. Laura Filpo Mercado Nutricionista" class="hero-main-image">
+                <div class="floating-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <span>Nutrición Real</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section (Moved here) -->
+    <section id="nosotros" class="section about">
+        <div class="container about-container">
+            <div class="about-image-wrapper">
+                <!-- Profile Image -->
+                <img src="assets/perfil_profesional.jpg" alt="Nut. Laura Filpo Mercado" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Sobre Mí</h2>
+                <h3 class="about-subtitle">Nut. Laura Filpo Mercado <span class="text-primary">| Nutrición Clinica |
+                        Metabolica & Renal</span>
+                </h3>
+                <div class="about-text">
+                    <p>Nutricionista-Dietista Clínica | Grado en Nutrición y Dietética por la Pontificia Universidad
+                        Católica Madre y Maestra (PUCMM). Máster en Nutrición Clínica & Endocrinología con la
+                        Universidad Católica de San Antonio de Murcia, España. Certificación en obesidad y sobrepeso,
+                        certificación en manejo nutricional en el embarazo, certificación en diabetes, entre otras.</p>
+                    <p style="margin-top: 1rem;">Experiencia proporcionando educación nutricional a diferentes grupos
+                        poblacionales, nutrición comunitaria, especial manejo en pacientes con malnutrición &
+                        desnutrición, asesorías nutricionales para enfermedades renales, metabólicas y tiroideas. Más de
+                        6 años en el sistema de educación y gestión.</p>
+                    <br>
+                    <p><strong>Misión:</strong> Ofrecer atención nutricional individualizada basada en evidencia
+                        científica, orientada a la prevención y tratamiento de condiciones clínicas, promoviendo hábitos
+                        alimentarios conscientes, seguros y adaptados a la realidad de cada paciente.</p>
+                    <br>
+                    <p><strong>Visión:</strong> Ser un espacio de referencia en nutrición clínica integral, reconocido
+                        por su enfoque humano, educativo y personalizado, donde cada paciente se sienta acompañado en su
+                        proceso de bienestar.</p>
+                </div>
+
+                <div class="credentials-box">
+                    <h4><i class="fas fa-graduation-cap"></i> Formación y Credenciales:</h4>
+                    <ul class="credentials-list">
+                        <li><i class="fas fa-university"></i> Grado en Nutrición y Dietética (PUCMM)</li>
+                        <li><i class="fas fa-graduation-cap"></i> Máster en Nutrición Clínica & Endocrinología (UCAM,
+                            España)</li>
+                        <li><i class="fas fa-check-circle"></i> Certificación en Obesidad y Sobrepeso</li>
+                        <li><i class="fas fa-check-circle"></i> Certificación en Nutrición en el Embarazo</li>
+                        <li><i class="fas fa-check-circle"></i> Certificación en Diabetes</li>
+                        <li><i class="fas fa-check-circle"></i> Certificación en Nutrición Deportiva</li>
+                    </ul>
+                </div>
+
+                <div class="focus-areas">
+                    <h4>Nuestros Valores:</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
+                        <span class="focus-tag">Ética</span>
+                        <span class="focus-tag">Empatía</span>
+                        <span class="focus-tag">Ciencia</span>
+                        <span class="focus-tag">Educación</span>
+                        <span class="focus-tag">Respeto</span>
+                        <span class="focus-tag">Individualización</span>
+                        <span class="focus-tag">Confidencialidad</span>
+                        <span class="focus-tag">Sostenibilidad</span>
+                        <span class="focus-tag">Responsabilidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mis Servicios</h2>
+                <p class="section-subtitle">Soluciones integrales para tu salud y bienestar</p>
+            </div>
+
+            <!-- Modality Banner -->
+            <div class="modality-banner" style="margin-bottom: 3rem;">
+                <span><i class="fas fa-wifi"></i> Modalidad Online</span>
+                <span class="divider">|</span>
+                <span><i class="fas fa-hospital-user"></i> Modalidad Presencial</span>
+            </div>
+
+            <!-- Online Spotlight Section -->
+            <div class="online-spotlight-container">
+                <div class="online-spotlight bounce-in">
+                    <div class="spotlight-badge">Recomendado</div>
+                    <div class="spotlight-main">
+                        <div class="spotlight-icon-wrapper">
+                            <i class="fas fa-laptop-medical pulse-animation"></i>
+                        </div>
+                        <div class="spotlight-text-content">
+                            <h3 class="spotlight-title">🥑 CONSULTAS ONLINE</h3>
+                            <h4 class="spotlight-subtitle">Nutrición clínica, personalizada y basada en evidencia</h4>
+                            <p class="spotlight-desc">Todas las consultas online están diseñadas para ofrecer atención
+                                nutricional profesional, adaptada a tu condición clínica y a tu estilo de vida.</p>
+                        </div>
+                    </div>
+                    <div class="spotlight-extras">
+                        <div class="s-extra-item">
+                            <i class="fas fa-home"></i>
+                            <span>Desde tu Hogar</span>
+                        </div>
+                        <div class="s-extra-item">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>Sin Fronteras</span>
+                        </div>
+                        <div class="s-extra-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Horarios Flexibles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Services Grid -->
+            <div class="services-grid-comprehensive">
+
+                <!-- Card 1: Consulta Inicial -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-user-md"></i></div>
+                    <h3>Consulta Nutricional Inicial</h3>
+                    <p>Evaluación completa del estado nutricional, historia clínica, hábitos, síntomas y objetivos.
+                        Incluye orientación nutricional personalizada y plan adaptado a tus necesidades de salud.</p>
+                </div>
+
+                <!-- Card 2: Seguimiento -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                    <h3>Consulta de Seguimiento</h3>
+                    <p>Revisión de avances, ajustes del plan nutricional, resolución de dudas clínicas y acompañamiento
+                        continuo para mantener resultados sostenibles.</p>
+                </div>
+
+                <!-- Card 3: Plan Personalizado -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-file-medical-alt"></i></div>
+                    <h3>Plan Nutricional Personalizado</h3>
+                    <p>Diseño de plan de alimentación individualizado, adaptado a tu condición clínica, estilo de vida,
+                        gustos y posibilidades reales.</p>
+                </div>
+
+                <!-- Card 4: Nutrición Clínica -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Nutrición Clínica Especializada</h3>
+                    <p>Abordaje nutricional para condiciones como obesidad, dislipidemia, resistencia a la insulina,
+                        SOP, alteraciones hormonales, salud renal, digestiva y metabólica.</p>
+                </div>
+
+                <!-- Card 5: Análisis Clínicos -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-microscope"></i></div>
+                    <h3>Evaluación de Análisis Clínicos</h3>
+                    <p>Análisis detallado de exámenes de laboratorio con explicación clara y recomendaciones
+                        nutricionales basadas en resultados.</p>
+                </div>
+
+                <!-- Card 6: Manejo de Peso -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Manejo de Peso Consciente</h3>
+                    <p>Acompañamiento nutricional enfocado en reducción de inflamación, mejora metabólica y cambios
+                        sostenibles, sin dietas extremas ni restricciones innecesarias.</p>
+                </div>
+
+                <!-- Card 7: Salud Digestiva -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Salud Digestiva e Inflamación</h3>
+                    <p>Plan nutricional orientado a mejorar síntomas digestivos, inflamación crónica, sensibilidad
+                        intestinal y bienestar gastrointestinal.</p>
+                </div>
+
+                <!-- Card 8: Educación -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Educación Nutricional Individual</h3>
+                    <p>Sesiones educativas para comprender tu condición, aprender a leer etiquetas, organizar comidas y
+                        tomar decisiones informadas.</p>
+                </div>
+
+                <!-- Card 9: Online -->
+                <div class="service-card-detail">
+                    <div class="icon-wrapper"><i class="fas fa-laptop-medical"></i></div>
+                    <h3>Asesoría Nutricional Online</h3>
+                    <p>Consultas virtuales con la misma calidad y personalización que la atención presencial, desde
+                        cualquier lugar.</p>
+                </div>
+
+                <!-- Card 10: Paquetes -->
+                <div class="service-card-detail highlight">
+                    <div class="icon-wrapper"><i class="fas fa-box-open"></i></div>
+                    <h3>Paquetes de Seguimiento</h3>
+                    <p>Planes de consultas programadas para acompañamiento continuo, mayor adherencia y mejores
+                        resultados a mediano y largo plazo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- New Clinical Approach Section -->
+    <section id="enfoque" class="section clinical-approach">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Enfoque Clínico Especializado</h2>
+                <p class="section-subtitle">Ciencia y empatía para diagnósticos precisos</p>
+            </div>
+
+            <div class="clinical-grid">
+                <!-- Night Eating Syndrome Card -->
+                <div class="clinical-card highlight-card">
+                    <div class="card-badge">Especialidad</div>
+                    <div class="card-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Síndrome del Comedor Nocturno</h3>
+                    <p class="definition">
+                        Trastorno de la alimentación que consiste en ingerir <strong>grandes cantidades de
+                            alimentos</strong>
+                        después de la cena con mucha frecuencia.
+                    </p>
+                    <div class="stats-box">
+                        <span class="stat-highlight">1.5%</span>
+                        <span class="stat-desc">de la población adulta (Es raro)</span>
+                    </div>
+                    <div class="alert-box">
+                        <h4><i class="fas fa-exclamation-circle"></i> Sospechar en pacientes con:</h4>
+                        <ul>
+                            <li>Obesidad de larga evolución</li>
+                            <li>Patologías psiquiátricas (Ansiedad/Depresión)</li>
+                            <li>Síndrome metabólico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Diagnosis & Treatment Card -->
+                <div class="clinical-card">
+                    <div class="card-icon"><i class="fas fa-user-md"></i></div>
+                    <h3>Diagnóstico Integral</h3>
+                    <p>Para un diagnóstico preciso, consideramos criterios clínicos, detectamos alteraciones en el
+                        <strong>ritmo circadiano</strong> midiendo:
+                    </p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-bed"></i> Patrón del sueño</li>
+                        <li><i class="fas fa-chart-line"></i> Niveles de cortisol</li>
+                        <li><i class="fas fa-history"></i> Antecedentes de hábitos</li>
+                    </ul>
+
+                    <div class="treatment-box">
+                        <h4>Tratamiento Multidisciplinar:</h4>
+                        <div class="tags">
+                            <span class="tag">Atención Médica</span>
+                            <span class="tag">Nutrición</span>
+                            <span class="tag">Psicología</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section id="proceso" class="section process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo Trabajamos?</h2>
+                <p class="section-subtitle">Tu camino hacia el bienestar paso a paso</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Evaluación Inicial</h3>
+                    <p>Conocemos tu historia, antecedentes y objetivos personales.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Diagnóstico</h3>
+                    <p>Análisis profundo de tu estado nutricional y metabólico.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Plan Personal</h3>
+                    <p>Diseño de tu estrategia única de alimentación y hábitos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Seguimiento</h3>
+                    <p>Acompañamiento constante y ajustes para lograr la meta.</p>
+                </div>
+            </div>
+
+            <!-- Conditions Section -->
+            <div class="conditions-section">
+                <div class="conditions-header">
+                    <h3>📌 Condiciones de las Consultas</h3>
+                </div>
+                <div class="conditions-grid">
+                    <!-- Reservation & Payment -->
+                    <div class="condition-item">
+                        <div class="cond-icon"><i class="fas fa-credit-card"></i></div>
+                        <h4>Reserva y Pago</h4>
+                        <ul>
+                            <li>Todas las consultas se reservan con pago previo.</li>
+                            <li>Los pagos <strong>no son reembolsables</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rescheduling -->
+                    <div class="condition-item">
+                        <div class="cond-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h4>Reprogramaciones</h4>
+                        <ul>
+                            <li>Deben solicitarse con mínimo <strong>24 horas</strong> de anticipación.</li>
+                            <li>Máximo <strong>2 reprogramaciones</strong> por consulta.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cancellations -->
+                    <div class="condition-item">
+                        <div class="cond-icon"><i class="fas fa-user-times"></i></div>
+                        <h4>Cancelaciones y Ausencias</h4>
+                        <ul>
+                            <li>La consulta <strong>no se repone ni se reembolsa</strong> si el paciente no asiste.</li>
+                            <li>Avisando con tiempo, se puede reprogramar <strong>sin costo</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="section social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Mis Pacientes</h2>
+                <p class="section-subtitle">Resultados reales, personas reales</p>
+            </div>
+
+            <!-- WhatsApp Wall -->
+            <div class="whatsapp-wall">
+                <div class="whatsapp-card">
+                    <div class="wa-header">
+                        <div class="wa-avatar">M</div>
+                        <div class="wa-info">
+                            <span class="wa-name">María Pérez</span>
+                            <span class="wa-status">en línea</span>
+                        </div>
+                    </div>
+                    <div class="wa-body">
+                        <div class="wa-message incoming">
+                            <p>¡Hola Dra! Solo quería agradecerle. ¡Hoy me entraron los jeans que no usaba hace 2 años!
+                                😭❤️</p>
+                            <span class="wa-time">10:30 AM</span>
+                        </div>
+                        <div class="wa-message outgoing">
+                            <p>¡Qué alegría María! 🎉 Te lo dije, el esfuerzo vale la pena. ¡Vamos por más!</p>
+                            <span class="wa-time">10:32 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whatsapp-card">
+                    <div class="wa-header">
+                        <div class="wa-avatar">C</div>
+                        <div class="wa-info">
+                            <span class="wa-name">Carlos Ruiz</span>
+                            <span class="wa-status">en línea</span>
+                        </div>
+                    </div>
+                    <div class="wa-body">
+                        <div class="wa-message incoming">
+                            <p>Laura, bajé mis tiempos en el maratón 🏃‍♂️. La carga de carbos funcionó perfecto.
+                                ¡Gracias por la guía!</p>
+                            <span class="wa-time">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whatsapp-card">
+                    <div class="wa-header">
+                        <div class="wa-avatar">A</div>
+                        <div class="wa-info">
+                            <span class="wa-name">Ana Gómez</span>
+                            <span class="wa-status">en línea</span>
+                        </div>
+                    </div>
+                    <div class="wa-body">
+                        <div class="wa-message incoming">
+                            <p>Ya no tengo ansiedad por las tardes. He aprendido a comer rico y sin culpa. Eres la mejor
+                                🙌</p>
+                            <span class="wa-time">11:15 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Stories / Transformations -->
+            <div class="transformations-wrapper mt-5">
+                <h3 class="text-center mb-4">Transformaciones</h3>
+                <div class="transformations-grid">
+                    <div class="transformation-card">
+                        <div class="trans-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="trans-text">"Perdí 15kg en 4 meses, pero lo mejor es que mis niveles de azúcar están
+                            normales por primera vez en años."</p>
+                        <div class="trans-author">- Roberto, 45 años (Diabetes Tipo 2)</div>
+                    </div>
+                    <div class="transformation-card">
+                        <div class="trans-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="trans-text">"Llegué con SOP y sin poder bajar de peso. Hoy entiendo mi cuerpo y me
+                            siento plena."</p>
+                        <div class="trans-author">- Sofía, 28 años (SOP)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="section pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planes y Precios</h2>
+                <p class="section-subtitle">Todas las consultas online están diseñadas para ofrecerte atención
+                    nutricional profesional, basada en evidencia y adaptada a tu condición clínica.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan 1: Básico -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-seedling"></i></div>
+                        <h3>Plan Básico</h3>
+                        <p class="plan-tagline">Ideal para empezar</p>
+                        <div class="price">RD$3,500<span>/ USD$75</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-utensils"></i> Evaluación de hábitos alimentarios</li>
+                        <li><i class="fas fa-notes-medical"></i> Historial clínico y antropometría</li>
+                        <li><i class="fas fa-vial"></i> Análisis de laboratorios (si aplica)</li>
+                        <li><i class="fas fa-file-medical-alt"></i> Plan nutricional personalizado</li>
+                        <li><i class="fas fa-capsules"></i> Recomendación de suplementos</li>
+                        <li><i class="fas fa-book-open"></i> Entrega digital + guía educativa</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-clock"></i> 60 min</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Online / Presencial</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20me%20interesa%20el%20Plan%20Básico" target="_blank"
+                        class="btn-secondary full-width">Agendar Cita</a>
+                </div>
+
+                <!-- Plan 2: Seguimiento -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Consulta de Seguimiento</h3>
+                        <p class="plan-tagline">Evalúa avances y ajusta</p>
+                        <div class="price">RD$1,000<span>/ USD$20</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Revisión del progreso</li>
+                        <li><i class="fas fa-sliders-h"></i> Ajustes del plan nutricional</li>
+                        <li><i class="fas fa-smile-beam"></i> Evaluación de síntomas y adherencia</li>
+                        <li><i class="fas fa-clipboard-list"></i> Nuevas recomendaciones</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Online / Presencial</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20quiero%20agendar%20mi%20seguimiento" target="_blank"
+                        class="btn-secondary full-width">Agendar Seguimiento</a>
+                </div>
+
+                <!-- Plan 3: Clínico Especializado -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Plan Clínico Especializado</h3>
+                        <p class="plan-tagline">Para condiciones específicas</p>
+                        <div class="price">RD$4,000<span>/ USD$80</span></div>
+                    </div>
+                    <div class="clinical-conditions">
+                        <small>Obesidad, SOP, Renal, Insulina, etc.</small>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-stethoscope"></i> Evaluación integral profunda</li>
+                        <li><i class="fas fa-microscope"></i> Revisión detallada de analíticas</li>
+                        <li><i class="fas fa-file-prescription"></i> Plan ajustado a diagnóstico/medicación</li>
+                        <li><i class="fas fa-user-md"></i> Manejo de comorbilidades</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-clock"></i> 60 min</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Online / Presencial</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20me%20interesa%20el%20Plan%20Clínico" target="_blank"
+                        class="btn-secondary full-width">Agendar Especialidad</a>
+                </div>
+
+                <!-- Plan 4: Express -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Planes Express</h3>
+                        <p class="plan-tagline">Pacientes con >2 consultas</p>
+                        <div class="price">RD$3,000<span>/ USD$60</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-video"></i> 1 Consulta online</li>
+                        <li><i class="fas fa-list-ol"></i> 2 Seguimientos nutricionales</li>
+                        <li><i class="fas fa-mobile-alt"></i> Seguimiento 24/7</li>
+                        <li><i class="fas fa-shopping-basket"></i> Lista de compras + Recetas</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-infinity"></i> Recurrente</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Online / Presencial</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20me%20interesa%20el%20Plan%20Express" target="_blank"
+                        class="btn-secondary full-width">Lo Quiero</a>
+                </div>
+
+                <!-- Plan 5: Mensual Premium (Highlighted) -->
+                <div class="pricing-card popular">
+                    <div class="popular-tag">Más Completo</div>
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-star"></i></div>
+                        <h3>Plan Mensual Premium</h3>
+                        <p class="plan-tagline" style="color:white;">1 Mes y 15 Días de Acompañamiento</p>
+                        <div class="price">RD$5,000<span>/ USD$100</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-double"></i> 1 Consulta Inicial + 3 Seguimientos</li>
+                        <li><i class="fas fa-utensils"></i> 2 Planes de Alimentación + Suplementación</li>
+                        <li><i class="fas fa-whatsapp"></i> Soporte Prioritario WhatsApp</li>
+                        <li><i class="fas fa-graduation-cap"></i> Material Educativo + Enfoque Conductual</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 1.5 Meses</span>
+                        <span><i class="fas fa-gem"></i> Premium</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20me%20interesa%20el%20Plan%20Mensual%20Premium"
+                        target="_blank" class="btn-primary full-width">Empezar Transformación</a>
+                </div>
+
+                <!-- Plan 6: Clases Grupales -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="plan-icon"><i class="fas fa-users"></i></div>
+                        <h3>Clases Educativas</h3>
+                        <p class="plan-tagline">Grupales Online</p>
+                        <div class="price">RD$1,500<span>/ USD$25</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-chalkboard-teacher"></i> Clase en vivo (zoom/meet)</li>
+                        <li><i class="fas fa-question-circle"></i> Sesión de preguntas y respuestas</li>
+                        <li><i class="fas fa-file-pdf"></i> Material educativo digital</li>
+                        <li><i class="fas fa-apple-alt"></i> Temas: Inflamación, SOP, Etiquetas...</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span><i class="fas fa-clock"></i> 60-90 min</span>
+                        <span><i class="fas fa-video"></i> En Vivo</span>
+                    </div>
+                    <a href="https://wa.me/18094569368?text=Hola,%20me%20interesan%20las%20Clases%20Grupales"
+                        target="_blank" class="btn-secondary full-width">Ver Próxima Fecha</a>
+                </div>
+            </div>
+
+            <!-- Additional Plans Text -->
+            <div style="text-align: center; margin-top: 3rem; color: var(--gray);">
+                <p>También disponible: <strong>Consulta de Seguimiento</strong> (RD$2,500 / USD$55) y <strong>Clases
+                        Educativas Grupales</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Resources Section -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Aprende a Nutrirte</h2>
+                <p class="section-subtitle">Recursos gratuitos para mejorar tu vida</p>
+            </div>
+
+            <!-- New Intro Content -->
+            <div class="learn-intro">
+                <p class="learn-description">
+                    La nutrición no debería ser complicada ni aburrida.
+                    Aquí encontrarás guías, consejos prácticos y contenido educativo creado para ayudarte a tomar
+                    mejores
+                    decisiones todos los días, sin dietas extremas ni reglas imposibles.
+                </p>
+
+                <div class="learn-objectives">
+                    <h3>Aprende a:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Comer mejor sin dejar de disfrutar</li>
+                        <li><i class="fas fa-check-circle"></i> Entender tu cuerpo y sus señales</li>
+                        <li><i class="fas fa-check-circle"></i> Leer etiquetas sin confundirte</li>
+                        <li><i class="fas fa-check-circle"></i> Crear hábitos sostenibles que sí duran</li>
+                    </ul>
+                </div>
+
+                <p class="learn-quote">Porque nutrirte bien no es una moda, es una forma de vivir mejor.</p>
+            </div>
+
+            <!-- Existing Blog Grid (kept as the resources mentioned) -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag tag-myth">Mito vs Realidad</span>
+                    <h3>Los carbohidratos NO engordan</h3>
+                    <p>La clave no es eliminarlos, es saber elegirlos y mejorar tus horarios.</p>
+                    <a href="#" class="read-more">Leer más &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag tag-tip">Tip Práctico</span>
+                    <h3>Meal Prep en 3 Pasos</h3>
+                    <p>Cómo organizar tus comidas de la semana en solo 2 horas el domingo.</p>
+                    <a href="#" class="read-more">Leer más &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="blog-content">
+                    <span class="blog-tag tag-edu">Educación</span>
+                    <h3>Aprende a Leer Etiquetas</h3>
+                    <p>No te dejes engañar por el "Sin Azúcar". Guía rápida de ingredientes.</p>
+                    <a href="#" class="read-more">Leer más &rarr;</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact-banner" class="contact-banner">
+        <div class="container banner-content">
+            <h2>¿Listo para el cambio?</h2>
+            <p>Agenda tu primera consulta de valoración completamente gratis.</p>
+            <a href="#contacto" class="btn-white">Agendar Ahora</a>
+        </div>
+    </section>
+
+    <section id="contacto" class="section contact">
+        <div class="container contact-wrapper">
+            <!-- Left Column: Location & Hours -->
+            <div class="contact-info">
+                <h2 class="section-title">Agenda tu Cita</h2>
+                <p class="section-subtitle">Estamos listos para recibirte</p>
+
+                <div class="info-block">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Calle M. Meriño, Apt 1ª, dentro de Yanimar Estetica.<br>Los Jardines Metropolitanos,
+                                Santiago de los Caballeros.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hours-box">
+                    <h4><i class="far fa-clock"></i> Horarios de Atención</h4>
+                    <ul>
+                        <li><span>Lunes - Sábados:</span> <strong>Por cita</strong></li>
+                        <li><span>Domingos:</span> Cerrado</li>
+                    </ul>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15047.30069608954!2d-70.6892109!3d19.463103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb1c5fb713cdf69%3A0x77ca6a7fc0874a62!2zROKAmSBZYW5pTWFyIGVzdMOpdGljYQ!5e0!3m2!1ses!2sdo!4v1768233081737!5m2!1ses!2sdo"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Right Column: Booking Actions -->
+            <div class="booking-section">
+                <div class="booking-card main-action">
+                    <h3>Reserva Fácil</h3>
+                    <p>La forma más rápida de agendar tu cita es por WhatsApp.</p>
+                    <a href="https://wa.me/18094569368" target="_blank" class="btn-whatsapp-lg">
+                        <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+                    </a>
+                </div>
+
+                <div class="booking-options">
+                    <div class="option-card">
+                        <i class="far fa-calendar-alt"></i>
+                        <h4>Calendario</h4>
+                        <p>Ver disponibilidad en línea</p>
+                        <a href="#" class="btn-link">Ver Agenda &rarr;</a>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Llamada</h4>
+                        <p>¿Prefieres llamar?</p>
+                        <a href="tel:8094569368" class="btn-link">809-456-9368</a>
+                    </div>
+                </div>
+
+                <div class="social-links centered">
+                    <p class="social-cta">Sígueme para tips diarios:</p>
+                    <div class="icons-row">
+                        <a href="https://www.instagram.com/nut.laurafilpom?igsh=M2Mxc2JmOTVtd2tu" target="_blank"
+                            class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1Ubmgeqprc/" target="_blank"
+                            class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@nut.laurafilpom?_r=1&_t=ZS-930qtHYGlbY" target="_blank"
+                            class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer legal-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Nut. Laura Filpo Mercado</h4>
+                    <p class="license-info">Ced. Prof. 12345678 | Nutrición Clínica</p>
+                    <p>&copy; 2026 Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Aviso de Privacidad</a>
+                        <a href="#">Términos de Uso</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p class="disclaimer-text">
+                    <strong>Aviso Médico:</strong> La información contenida en este sitio web tiene únicamente fines
+                    educativos e informativos. No sustituye el consejo, diagnóstico o tratamiento médico profesional.
+                    Siempre busca la asesoría de tu médico u otro proveedor de salud calificado para cualquier duda
+                    sobre
+                    una condición médica.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

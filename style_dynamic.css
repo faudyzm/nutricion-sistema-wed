@@ -1,0 +1,521 @@
+/* Animations & Dynamic Elements */
+:root {
+    --blob-color-1: rgba(16, 185, 129, 0.15);
+    --blob-color-2: rgba(52, 211, 153, 0.15);
+    --blob-color-3: rgba(249, 115, 22, 0.1);
+}
+
+body {
+    background-color: #f0fdf4;
+    /* Very light green base */
+    overflow-x: hidden;
+}
+
+/* Floating Blobs */
+.blobs-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.8;
+}
+
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--blob-color-1);
+    top: -100px;
+    left: -100px;
+    animation: float 20s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--blob-color-2);
+    bottom: -50px;
+    right: -50px;
+    animation: float 15s infinite alternate-reverse ease-in-out;
+}
+
+.blob-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--blob-color-3);
+    top: 40%;
+    left: 40%;
+    animation: float 18s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(50px, 50px) rotate(10deg);
+    }
+}
+
+/* Glassmorphism Enhancements */
+.navbar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-card,
+.testimonial-card,
+.contact-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 40px 0 rgba(16, 185, 129, 0.15);
+    border-color: var(--primary);
+}
+
+/* Hero Modernization */
+.hero {
+    /* Keeping the image but adding a modern feel */
+    background-attachment: fixed;
+    /* Parallax basic */
+}
+
+.hero-title {
+    opacity: 0;
+    /* JS will reveal */
+    transform: translateY(30px);
+}
+
+/* Interactive Elements */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Magnetic Buttons (JS target) */
+.magnetic-btn {
+    display: inline-block;
+}
+
+/* Section Transitions */
+.reveal-text {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.5s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Spotlight Section Styles */
+.online-spotlight-container {
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+.online-spotlight {
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 20px 50px -12px rgba(16, 185, 129, 0.25);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.online-spotlight:hover {
+    transform: translateY(-5px);
+}
+
+.spotlight-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--secondary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+    text-transform: uppercase;
+    animation: floatBadge 3s infinite ease-in-out;
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.spotlight-main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.spotlight-icon-wrapper {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--primary);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+    border: 4px solid #ecfdf5;
+}
+
+.spotlight-text-content {
+    flex: 1;
+}
+
+.spotlight-title {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spotlight-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spotlight-desc {
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.spotlight-extras {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.s-extra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.s-extra-item i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsiveness for Spotlight */
+@media (max-width: 768px) {
+    .spotlight-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .spotlight-title {
+        justify-content: center;
+        font-size: 1.75rem;
+    }
+
+    .spotlight-extras {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+/* Update Pricing Cards for Better Layout */
+.plan-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.popular .plan-icon {
+    color: white;
+}
+
+.plan-tagline {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.plan-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: auto;
+    /* Push to bottom if flex column */
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.plan-meta i {
+    color: var(--secondary);
+    margin-right: 4px;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-features {
+    flex-grow: 1;
+}
+
+.clinical-conditions {
+    background: #e0f2fe;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #0369a1;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.conditions-section {
+    margin-top: 5rem;
+    /* Increased top margin */
+    background: #fff;
+    border-radius: 20px;
+    /* More rounded */
+    padding: 3rem;
+    /* More internal space */
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.conditions-header h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 1rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.condition-item {
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.condition-item:hover {
+    transform: translateY(-3px);
+    background: #f0f9ff;
+}
+
+.cond-icon {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.condition-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-dark);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+.condition-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.condition-item ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.condition-item ul li::before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Aprende a Nutrirte Section Styles */
+.learn-intro {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.learn-description {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.learn-objectives {
+    background: #f0fdf4;
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    border: 1px dashed var(--primary);
+    display: inline-block;
+    width: 100%;
+}
+
+.learn-objectives h3 {
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.learn-objectives ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.learn-objectives li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--dark);
+}
+
+.learn-objectives li i {
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.learn-quote {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+.condition-item strong {
+    color: var(--dark);
+}
